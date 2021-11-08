@@ -10,6 +10,17 @@
     font-family: Roboto;
 }
 /*
+    Colors
+*/
+$ErrorColor: #EA2027;
+$PrimColor: #006266;
+$WarnColor: #FFC312;
+$SuccColor: #009432;
+$MuteColor: #576574;
+$LightColor: #EEE;
+$DarkColor: #222f3e;
+
+/*
     Social Icons
 */
 %SocialStyle {
@@ -52,20 +63,11 @@ $gridnum: 12;
 .text-center {
     text-align: center;
 }
-.warn-text {
-    color: #FFC312;
-}
-.error-text {
-    color: #EA2027;
-}
-.succ-text {
-    color: #009432;
-}
-.prim-text {
-    color: #006266;
-}
-.mute-text {
-    color: #576574;
+$TextMap:(light: $LightColor,mute: $MuteColor,succ: $SuccColor,prim: $PrimColor,error: $ErrorColor,warn: $WarnColor,dark: $DarkColor);
+@each $TextType, $TextColor in $TextMap {
+    .#{$TextType}-text {
+        color: $TextColor;
+    }
 }
 
 /*
@@ -85,14 +87,25 @@ $gridnum: 12;
 /*
     Background
 */
-.bg-light {
-    background-color: #EEE;
-    border: 1px solid #AAA;
+.bg {
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
 }
-.bg-mute {
-    background-color: #AAA;
-    border: 1px solid #AAA;
+$BgMap:(light: $LightColor,mute: $MuteColor,succ: $SuccColor,prim: $PrimColor,error: $ErrorColor,warn: $WarnColor,dark: $DarkColor);
+@each $BgType, $BgColor in $BgMap {
+    .#{$BgType}-bg {
+        @extend .bg;
+        background-color: $BgColor;
+        border-color: $BgColor;
+
+        @if $BgColor == $DarkColor {
+            color:$LightColor;
+        }
+
+    }
 }
+
 
 /*
     Images

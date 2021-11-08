@@ -10,6 +10,9 @@
 }
 
 /*
+    Colors
+*/
+/*
     Social Icons
 */
 .se-facebook, .se-twitter, .se-google, .se-linkedin, .se-instagram, .se-whatsapp {
@@ -110,12 +113,12 @@ i.se {
   text-align: center;
 }
 
-.warn-text {
-  color: #FFC312;
+.light-text {
+  color: #EEE;
 }
 
-.error-text {
-  color: #EA2027;
+.mute-text {
+  color: #576574;
 }
 
 .succ-text {
@@ -126,8 +129,16 @@ i.se {
   color: #006266;
 }
 
-.mute-text {
-  color: #576574;
+.error-text {
+  color: #EA2027;
+}
+
+.warn-text {
+  color: #FFC312;
+}
+
+.dark-text {
+  color: #222f3e;
 }
 
 /*
@@ -148,14 +159,46 @@ i.se {
 /*
     Background
 */
-.bg-light {
-  background-color: #EEE;
-  border: 1px solid #AAA;
+.bg, .light-bg, .mute-bg, .succ-bg, .prim-bg, .error-bg, .warn-bg, .dark-bg {
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
 }
 
-.bg-mute {
-  background-color: #AAA;
-  border: 1px solid #AAA;
+.light-bg {
+  background-color: #EEE;
+  border-color: #EEE;
+}
+
+.mute-bg {
+  background-color: #576574;
+  border-color: #576574;
+}
+
+.succ-bg {
+  background-color: #009432;
+  border-color: #009432;
+}
+
+.prim-bg {
+  background-color: #006266;
+  border-color: #006266;
+}
+
+.error-bg {
+  background-color: #EA2027;
+  border-color: #EA2027;
+}
+
+.warn-bg {
+  background-color: #FFC312;
+  border-color: #FFC312;
+}
+
+.dark-bg {
+  background-color: #222f3e;
+  border-color: #222f3e;
+  color: #EEE;
 }
 
 /*
