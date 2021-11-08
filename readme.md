@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/iSemary/Semary/master/img/logo.png" style="margin:0 auto;  display: block;
+<img src="https://raw.githubusercontent.com/iSemary/Semary/master/img/logo.png" style="margin:0 auto;  display: block;text-align:center;
 " width="200" height="200" />
 
 
