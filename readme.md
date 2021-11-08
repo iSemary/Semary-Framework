@@ -1,5 +1,4 @@
-
-![alt text](https://github.com/iSemary/Semary/img/logo.png?raw=true)
+![alt text](https://raw.githubusercontent.com/iSemary/Semary/master/img/logo.png)
 
 
 # Semary Framework
