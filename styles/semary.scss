@@ -1,0 +1,51 @@
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*
+    Social Icons
+*/
+%SocialStyle {
+
+}
+
+$SocialList: facebook twitter google linkedin instagram;
+
+@each $SocialLi in $SocialList {
+    .se-ico-#{$SocialLi} {
+        @extend %SocialStyle;
+        background-image: url('./img/#{$SocialLi}.png');
+    }
+}
+
+/*
+    Grid System
+*/
+$gridnum: 12;
+
+%grid {
+    float: left;
+    padding: 10px;
+    background-color: #EEE;
+    border: 1px solid #AAA;
+    text-align: center;
+    font-weight: bold;
+    font-family: Tahoma;
+}
+
+@for $i from 1 through $gridnum {
+    .col-#{$i} {
+        width: (100% / ($gridnum / $i));
+        @extend %grid;
+    }
+}
+
+.warn-text {
+    color: #FFC312;
+}
+
+.error-text {
+    color: #EA2027;
+}
