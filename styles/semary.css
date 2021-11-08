@@ -153,4 +153,16 @@ i.se {
   border: 1px solid #AAA;
 }
 
+.bg-mute {
+  background-color: #AAA;
+  border: 1px solid #AAA;
+}
+
+/*
+    Images
+*/
+.nav-logo {
+  width: 75px;
+}
+
 /*# sourceMappingURL=semary.css.map */
