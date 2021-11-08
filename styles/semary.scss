@@ -1,25 +1,35 @@
+@font-face {
+    font-family: Roboto;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
 
 *{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: Roboto;
 }
 /*
     Social Icons
 */
 %SocialStyle {
-
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+    width: 35px;
+    height: 35px;
 }
 
-$SocialList: facebook twitter google linkedin instagram;
+$SocialList: facebook twitter google linkedin instagram whatsapp;
 
 @each $SocialLi in $SocialList {
-    .se-ico-#{$SocialLi} {
+    .se-#{$SocialLi} {
         @extend %SocialStyle;
-        background-image: url('./img/#{$SocialLi}.png');
+        background-image: url('../img/png/#{$SocialLi}.png');
     }
 }
-
+i.se {
+    display: block;
+}
 /*
     Grid System
 */
@@ -28,11 +38,6 @@ $gridnum: 12;
 %grid {
     float: left;
     padding: 10px;
-    background-color: #EEE;
-    border: 1px solid #AAA;
-    text-align: center;
-    font-weight: bold;
-    font-family: Tahoma;
 }
 
 @for $i from 1 through $gridnum {
@@ -41,11 +46,46 @@ $gridnum: 12;
         @extend %grid;
     }
 }
-
+/*
+    Text
+*/
+.text-center {
+    text-align: center;
+}
 .warn-text {
     color: #FFC312;
 }
-
 .error-text {
     color: #EA2027;
+}
+.succ-text {
+    color: #009432;
+}
+.prim-text {
+    color: #006266;
+}
+.mute-text {
+    color: #576574;
+}
+
+/*
+    Make 
+*/
+.make-flex {
+    display: flex;
+}
+.make-grid {
+    display: grid;
+}
+.make-flex-center{
+    @extend .make-flex;
+    justify-content: center;
+}
+
+/*
+    Background
+*/
+.bg-light {
+    background-color: #EEE;
+    border: 1px solid #AAA;
 }
